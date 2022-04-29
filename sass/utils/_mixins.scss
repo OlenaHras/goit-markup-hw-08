@@ -1,0 +1,15 @@
+@mixin centeredFlex() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin hoverAccent(){
+  color: $accent-color;
+  border: 1px solid $accent-color;
+}
+
+@mixin fontSize($size, $line){
+  font-size: $size;
+  line-height: $line;
+}

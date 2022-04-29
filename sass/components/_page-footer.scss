@@ -1,0 +1,154 @@
+// .page-footer .container {
+//   display: flex;
+//   flex-wrap: nowrap;
+//   align-items: baseline;
+//   justify-content: space-between;
+// }
+
+.page-footer {
+  background-color: $footer-color;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+}
+
+.address {
+  display: block;
+}
+
+// .address-list {
+//   display: flex;
+//   flex-direction: column;
+// }
+
+.address-list__link {
+  color: rgba(255, 255, 255, 0.6);
+  font-style: normal;
+
+  @include fontSize(14px, 1.71);
+  text-decoration: none;
+}
+
+.address-list__link {
+  display: inline-block;
+  margin-top: 9px;
+
+  transition: color 250ms $timing-function;
+
+  &:hover {
+    color: $accent-color;
+  }
+
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+
+.address-list__link--white {
+  color: #ffffff;
+  margin-top: 0;
+}
+
+.logo--white {
+  display: block;
+  margin-bottom: 20px;
+
+  color: $white-color;
+}
+
+.socials {
+  @include centeredFlex();
+  margin-top: 20px;
+}
+
+.page-footer__link {
+  @extend %social;
+  color: $white-color;
+  background-color: rgba(255, 255, 255, 0.1);
+  margin-right: 10px;
+
+  &:nth-child(4) {
+    margin-right: 0;
+  }
+
+  &socials__icon {
+    color: $white-color;
+  
+  }
+}
+
+.subscribe__title {
+  display: block;
+  color: $white-color;
+  font-weight: 700;
+  @include fontSize(14px, 1.14);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+}
+
+.subscribe__form {
+  // display: flex;
+  margin-top: 20px;
+}
+
+.subscribe__input {
+  width: 358px;
+  height: 50px;
+  color: $white-color;
+  background-color: inherit;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  margin-right: 15px;
+  padding-left: 16px;
+
+  transition: border 250ms $timing-function;
+
+  &::placeholder {
+    @include fontSize(16px, 1.25);
+    letter-spacing: 0.03em;
+    
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  &:hover {
+    outline-style: none;
+    box-shadow: none;
+    border: 1px solid $accent-color;
+  }
+
+  &:focus {
+    outline-style: none;
+    box-shadow: none;
+    border: 1px solid $accent-color;
+  }
+
+}
+
+.subscribe__button {
+  @extend %button;
+  // @include centeredFlex();
+  padding: 0;
+ 
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+}
+
+
+.subscribe__text {
+  font-weight: 700;
+  @include fontSize(16px, 1.88);;
+
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: $white-color;
+  margin-right: 10px;
+}
+
+.subscribe__icon {
+  width: 24px;
+  height: 24px;
+}
