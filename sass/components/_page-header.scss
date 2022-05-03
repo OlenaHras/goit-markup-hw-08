@@ -5,8 +5,10 @@
   border-bottom: 1px solid #ECECEC;
 }
 
-.header {
-  @include centeredFlex();
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   
 }
 
@@ -26,14 +28,18 @@
 
 /* site-nav */
 
-// .site-nav {
+.site-nav {
+  // font-weight: 500;
+  // font-size: 40px;
+  // line-height: 1.18;
+  // letter-spacing: 0.02em;
 //   position: relative;
 //   display: flex;
-// }
+}
 
-// .site-nav__item:not(:last-child) {
-//   margin-right: 50px;
-// }
+.site-nav__item:not(:last-child) {
+  margin-bottom: 32px;
+}
 
 .site-nav__link {
   // display: block;
@@ -43,6 +49,7 @@
   color: $title-text-color;
 
   font-weight: 500;
+  font-size: 40px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   text-decoration: none;
@@ -76,23 +83,27 @@
 }
 
 /* auth-nav */
-// .auth-nav {
+.auth-nav {
+  margin-top: 302px;
 //   display: flex;
 //   justify-content: flex-end;
 //   margin-left: auto;
 //   align-items: center;
-// }
+}
 
 // .auth-nav__item+.auth-nav__item {
-//   margin-left: 30px;
+//   margin-top: 32px;
 // }
 
 .auth-nav__link {
   // display: flex;
   color: $primary-text-color;
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.18;
   letter-spacing: 0.02em;
   text-decoration: none;
-  font-weight: 500;
+  
   align-items: center;
 
   transition: color 250ms $timing-function;
@@ -104,6 +115,13 @@
   &:focus {
     color: $accent-color;
   }
+}
+.auth-nav__link--changed {
+  display: inline-block;
+  margin-top: 32px;
+  font-size: 24px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
 }
 
 .auth-nav__mail {
@@ -121,12 +139,32 @@
   margin-right: 10px;
 }
 
+.soc-navigation {
+  display: flex;
+  margin-top: 64px;
+}
+.soc-navigation__item:not(:last-child) {
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+}
+
+
+.soc-navigation__link {
+  @include centeredFlex();
+  padding: 0 10px;
+  @include fontSize(18px, 1.22);
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  color: $accent-color;
+}
+
+
 .menu-button {
   display: inline-flex;
   margin: 0;
   padding: 0;
   border: none;
   background-color: transparent;
+  z-index: 2;
 
   &.menu-button .icon-cross {
     display: none;
@@ -139,24 +177,37 @@
   &.menu-button.is-open .icon-menu {
     display: none;
   }
+
+  @media screen and (min-width: 768px){
+    display: none;
+  }
 }
 
 
 
 .menu-container {
-  display: none;
-  position: absolute;
-  height: 796px;
-  top: 100%;
-  left: 0;
-  width: 100%;
+  
+  
+  background-color: $white-color;
 
   padding: 48px 40px;
   font-size: 40px;
   line-height: 1.18;
   letter-spacing: 0.02em;
 
+@media screen and (max-width: 767px){
+  display: none;
+  position: absolute;
+  height: 796px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  
   &.is-open {
     display: block;
   }
 }
+
+}
+
+

@@ -12,8 +12,8 @@
 </head>
 <body>
   <header class="page-header">
-    <div class="container header">
-      <nav class="header">
+    <div class="container">
+      <nav class="nav">
         <a href="./index.html" class="logo">
           <span class="logo__accent">Web</span>studio
         </a>
@@ -33,29 +33,40 @@
         </svg>
       </button>
 
-      <div class="menu-container" id="menu-container" data-menu>
-        <ul class="site-nav">
-          <li class="site-nav__item"><a href="./index.html" class="site-nav__link current">Студия</a></li>
-          <li class="site-nav__item"><a href="./portfolio.html" class="site-nav__link">Портфолио</a></li>
-          <li class="site-nav__item"><a href="" class="site-nav__link">Контакты</a></li>
-        </ul>
-      </div>
-        
-
+        <div class="menu-container" id="menu-container" data-menu>
+          <div class="navigation">
+            <ul class="site-nav">
+            <li class="site-nav__item"><a href="./index.html" class="site-nav__link current">Студия</a></li>
+            <li class="site-nav__item"><a href="./portfolio.html" class="site-nav__link">Портфолио</a></li>
+            <li class="site-nav__item"><a href="" class="site-nav__link">Контакты</a></li>
+            </ul>  
+          </div>
+          <div class="contacts">
+            <ul class="auth-nav">
+              <li class="auth-nav__item"><a href="tel:+380961111111" class="auth-nav__link">
+                <svg class="auth-nav__tel">
+                  <use href="./images/icons.svg#icon-smartphone" width="10" height="16"></use>
+                </svg>
+            +38 096 111 11 11</a></li>
+              <li class="auth-nav__item "><a href="mailto:info@devstudio.com" class="auth-nav__link auth-nav__link--changed">
+                <svg class="auth-nav__mail">
+                  <use href="./images/icons.svg#icon-envelope" width="16" height="12"></use>
+                </svg>
+                info@devstudio.com</a>
+              </li>
+            </ul>
+          </div>
+          <div class="soc-nav">
+            <ul class="soc-navigation">
+              <li class="soc-navigation__item"><a href="" class="soc-navigation__link">Instagram</a></li>
+              <li class="soc-navigation__item"><a href="" class="soc-navigation__link">Twitter</a></li>
+              <li class="soc-navigation__item"><a href="" class="soc-navigation__link">Facebook</a></li>
+              <li class="soc-navigation__item"><a href="" class="soc-navigation__link">LinkedIn</a></li>
+            </ul>
+          </div>
+        </div>     
       </nav>
       
-      <ul class="auth-nav">
-        <li class="auth-nav__item"><a href="mailto:info@devstudio.com" class="auth-nav__link">
-          <svg class="auth-nav__mail">
-            <use href="./images/icons.svg#icon-envelope" width="16" height="12"></use>
-          </svg>
-          info@devstudio.com</a></li>
-        <li class="auth-nav__item"><a href="tel:+380961111111" class="auth-nav__link">
-          <svg class="auth-nav__tel">
-            <use href="./images/icons.svg#icon-smartphone" width="10" height="16"></use>
-          </svg>
-          +38 096 111 11 11</a></li>
-      </ul>
     </div>
     
   </header>
@@ -117,13 +128,13 @@
         
         
           <ul class="work-list">
-            <li class="work__item"><img src="./images/doing1.jpg" alt="Програмирование" width="370">
+            <li class="work__item"><img src="./images/Desktop/doing1-1200.jpg" srcset="./images/Desktop/doing1-1200@2x.jpg 2x" alt="Програмирование" width="370">
               <div class="work__text">Десктопные приложения</div> 
             </li>
-            <li class="work__item"><img src="./images/doing2.jpg" alt="Адаптация страниц" width="370">
+            <li class="work__item"><img src="./images/Desktop/doing2-1200.jpg" srcset="./images/Desktop/doing2-1200@2x.jpg 2x" alt="Адаптация страниц" width="370">
               <div class="work__text">Мобильные приложения</div>
             </li>
-            <li class="work__item"><img src="./images/doing3.jpg" alt="Стилизация" width="370">
+            <li class="work__item"><img src="./images/Desktop/doing3-1200.jpg" srcset="./images/Desktop/doing3-1200@2x.jpg 2x" alt="Стилизация" width="370">
               <div class="work__text">Дизайнерские решения</div>
             </li>
           </ul>
@@ -138,7 +149,16 @@
         <ul class="command-list">
           <li class="command-list__item">
             <div class="command-list__wrap">
-              <img src="./images/command1.jpg" alt="Дизайнер" width="270">
+              <picture>
+                <source srcset="./images/Desktop/command1-1200.jpg 1x, ./images/Desktop/command1-1200@2x.jpg 2x"
+                  media="(min-width: 1200px)" type="image/jpeg">
+                <source srcset="./images/Tablet/command1-768.jpg 1x, ./images/Tablet/command1-768@2x.jpg 2x" media="(min-width: 768px)"
+                  type="image/jpeg">
+                <source srcset="./images/Mobile/command1-480.jpg 1x, ./images/Mobile/command1-480@2x.jpg 2x" media="(max-width: 767px)"
+                  type="image/jpeg">
+                <img src="./images/Mobile/command1-480.jpg" alt="Дизайнер">
+              </picture>
+              <!-- <img src="./images/Mobile/command1.jpg" alt="Дизайнер"> -->
               <div class="command-list__name">
                 <h3 class="command-list__title">Игорь Демьяненко</h3>
                 <p class="command-list__position">Product Designer</p>
@@ -178,7 +198,16 @@
           </li>
           <li class="command-list__item">
             <div class="command-list__wrap">
-              <img src="./images/command2.jpg" alt="Разработчик" width="270">
+              <picture>
+                <source srcset="./images/Desktop/command2-1200.jpg 1x, ./images/Desktop/command2-1200@2x.jpg 2x"
+                  media="(min-width: 1200px)" type="image/jpeg">
+                <source srcset="./images/Tablet/command2-768.jpg 1x, ./images/Tablet/command2-768@2x.jpg 2x"
+                  media="(min-width: 768px)" type="image/jpeg">
+                <source srcset="./images/Mobile/command2-480.jpg 1x, ./images/Mobile/command2-480@2x.jpg 2x" media="(max-width: 767px)"
+                  type="image/jpeg">
+                <img src="./images/Mobile/command2-480.jpg" alt="Разработчик">
+              </picture>
+              <!-- <img src="./images/command2.jpg" alt="Разработчик" > -->
               <div class="command-list__name">
                 <h3 class="command-list__title">Ольга Репина</h3>
                 <p class="command-list__position">Frontend Developer</p>
@@ -218,7 +247,16 @@
           </li>
           <li class="command-list__item">
             <div class="command-list__wrap">
-              <img src="./images/command3.jpg" alt="Маркетинг" width="270">
+              <picture>
+                <source srcset="./images/Desktop/command3-1200.jpg 1x, ./images/Desktop/command3-1200@2x.jpg 2x"
+                  media="(min-width: 1200px)" type="image/jpeg">
+                <source srcset="./images/Tablet/command3-768.jpg 1x, ./images/Tablet/command3-768@2x.jpg 2x"
+                  media="(min-width: 768px)" type="image/jpeg">
+                <source srcset="./images/Mobile/command3-480.jpg 1x, ./images/Mobile/command3-480@2x.jpg 2x" media="(max-width: 767px)"
+                  type="image/jpeg">
+                <img src="./images/Mobile/command3-480.jpg" alt="Маркетинг">
+              </picture>
+              <!-- <img src="./images/command3.jpg" alt="Маркетинг"> -->
               <div class="command-list__name">
                 <h3 class="command-list__title">Николай Тарасов</h3>
                 <p class="command-list__position">Marketing</p>
@@ -258,7 +296,16 @@
           </li>
           <li class="command-list__item">
             <div class="command-list__wrap">
-              <img src="./images/command4.jpg" alt="Дизайнер" width="270">
+              <picture>
+                <source srcset="./images/Desktop/command4-1200.jpg 1x, ./images/Desktop/command4-1200@2x.jpg 2x"
+                  media="(min-width: 1200px)" type="image/jpeg">
+                <source srcset="./images/Tablet/command4-768.jpg 1x, ./images/Tablet/command4-768@2x.jpg 2x"
+                  media="(min-width: 768px)" type="image/jpeg">
+                <source srcset="./images/Mobile/command4-480.jpg 1x, ./images/Mobile/command4-480@2x.jpg 2x"
+                  media="(max-width: 767px)" type="image/jpeg">
+                <img src="./images/Mobile/command4-480.jpg" alt="Маркетинг">
+              </picture>
+              <!-- <img src="./images/command4.jpg" alt="Дизайнер"> -->
             <div class="command-list__name">
               <h3 class="command-list__title">Михаил Ермаков</h3>
               <p class="command-list__position">UI Designer</p>
