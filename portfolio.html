@@ -12,34 +12,56 @@
 </head>
 <body>
     <header class="page-header">
-        <div class="container header">
-            <nav class="header">
+        <div class="container">
+            <nav class="nav">
                 <a href="./index.html" class="logo">
                     <span class="logo__accent">Web</span>studio
                 </a>
-
-                <ul class="site-nav">
-                    <li class="site-nav__item"><a href="./index.html" class="site-nav__link">Студия</a></li>
-                    <li class="site-nav__item"><a href="./portfolio.html" class="site-nav__link current">Портфолио</a></li>
-                    <li class="site-nav__item"><a href="" class="site-nav__link">Контакты</a></li>
-                </ul>
-
+                <button type="button" class="menu-button" aria-expanded="false" aria-controls="menu-container"
+                    data-menu-button>
+                    <svg width="40" height="40" aria-label="Переключатель мобильного меню">
+                        <use class="icon-cross" href="./images/icons.svg#icon-cross"></use>
+                        <use class="icon-menu" href="./images/icons.svg#icon-menu"></use>
+                    </svg>
+                </button>
+    
+                <div class="menu-container" id="menu-container" data-menu>
+                    <div class="navigation">
+                        <ul class="site-nav">
+                            <li class="site-nav__item"><a href="./index.html" class="site-nav__link">Студия</a></li>
+                            <li class="site-nav__item"><a href="./portfolio.html" class="site-nav__link current">Портфолио</a></li>
+                            <li class="site-nav__item"><a href="" class="site-nav__link">Контакты</a></li>
+                        </ul>
+                    </div>
+                    <div class="contacts">
+                        <ul class="auth-nav">
+                            <li class="auth-nav__item"><a href="tel:+380961111111" class="auth-nav__link">
+                                    <svg class="auth-nav__tel">
+                                        <use href="./images/icons.svg#icon-smartphone" width="10" height="16"></use>
+                                    </svg>
+                                    +38 096 111 11 11</a></li>
+                            <li class="auth-nav__item "><a href="mailto:info@devstudio.com"
+                                    class="auth-nav__link auth-nav__link--changed">
+                                    <svg class="auth-nav__mail">
+                                        <use href="./images/icons.svg#icon-envelope" width="16" height="12"></use>
+                                    </svg>
+                                    info@devstudio.com</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="soc-nav">
+                        <ul class="soc-navigation">
+                            <li class="soc-navigation__item"><a href="" class="soc-navigation__link">Instagram</a></li>
+                            <li class="soc-navigation__item"><a href="" class="soc-navigation__link">Twitter</a></li>
+                            <li class="soc-navigation__item"><a href="" class="soc-navigation__link">Facebook</a></li>
+                            <li class="soc-navigation__item"><a href="" class="soc-navigation__link">LinkedIn</a></li>
+                        </ul>
+                    </div>
+                </div>
             </nav>
-
-            <ul class="auth-nav">
-                <li class="auth-nav__item"><a href="mailto:info@devstudio.com" class="auth-nav__link">
-                        <svg class="auth-nav__mail">
-                            <use href="./images/icons.svg#icon-envelope" width="16" height="12"></use>
-                        </svg>
-                        info@devstudio.com</a></li>
-                <li class="auth-nav__item"><a href="tel:+380961111111" class="auth-nav__link">
-                        <svg class="auth-nav__tel">
-                            <use href="./images/icons.svg#icon-smartphone" width="10" height="16"></use>
-                        </svg>
-                        +38 096 111 11 11</a></li>
-            </ul>
+    
         </div>
-
+    
     </header>
     <main>
         <section class="nav-buttons">
@@ -55,9 +77,19 @@
                 
                 <ul class="card-set">
                     <li class="card-set__item">
-                        <a href="" class="card-set__link">
+                        <div class="card-set__wrap">
+                            <a href="" class="card-set__link">
                             <div class="product">
-                                <img src="./images/texno.jpg" alt="Технокряк" width="370">
+                                <picture>
+                                    <source srcset="./images/Desktop/texno-1200.jpg 1x, ./images/Desktop/texno-1200@2x.jpg 2x"
+                                        media="(min-width: 1200px)" type="image/jpeg">
+                                    <source srcset="./images/Tablet/texno-768.jpg 1x, ./images/Tablet/texno-768@2x.jpg 2x"
+                                        media="(min-width: 768px)" type="image/jpeg">
+                                    <source srcset="./images/Mobile/texno-480.jpg 1x, ./images/Mobile/texno-480@2x.jpg 2x"
+                                        media="(max-width: 767px)" type="image/jpeg">
+                                    <img src="./images/Mobile/texno-480.jpg" alt="Технокряк">
+                                </picture>
+                                <!-- <img src="./images/texno.jpg" alt="Технокряк" width="370"> -->
                                 <p class="product__overlay">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это
                                     позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
                             </div>
@@ -67,112 +99,209 @@
                                 
                             </div>   
                         </a>
+                        </div>
                     </li>
                     <li class="card-set__item">
-                        <a href="" class="card-set__link">
-                            <div class="product">
-                                <img src="./images/poster.jpg" alt="Постер" width="370">
-                                <p class="product__overlay">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это
-                                    позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
-                            </div>
-                            <div class="product__meta">
-                                <h2 class="product__title">Постер New Orlean vs Golden Star</h2>
-                                <p>Дизайн</p>
-                            </div>
-                        </a>
+                        <div class="card-set__wrap">
+                            <a href="" class="card-set__link">
+                                <div class="product">
+                                    <picture>
+                                        <source srcset="./images/Desktop/poster-1200.jpg 1x, ./images/Desktop/poster-1200@2x.jpg 2x"
+                                            media="(min-width: 1200px)" type="image/jpeg">
+                                        <source srcset="./images/Tablet/poster-768.jpg 1x, ./images/Tablet/poster-768@2x.jpg 2x"
+                                            media="(min-width: 768px)" type="image/jpeg">
+                                        <source srcset="./images/Mobile/poster-480.jpg 1x, ./images/Mobile/poster-480@2x.jpg 2x"
+                                            media="(max-width: 767px)" type="image/jpeg">
+                                        <img src="./images/Mobile/poster-480.jpg" alt="Постер">
+                                    </picture>
+                                    <!-- <img src="./images/poster.jpg" alt="Постер" width="370"> -->
+                                    <p class="product__overlay">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов.
+                                        Все это
+                                        позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
+                                </div>
+                                <div class="product__meta">
+                                    <h2 class="product__title">Постер New Orlean vs Golden Star</h2>
+                                    <p>Дизайн</p>
+                                </div>
+                            </a>
+                        </div>
                     </li>
                     <li class="card-set__item">
-                        <a href="" class="card-set__link">
-                            <div class="product">
-                                <img src="./images/seafood.jpg" alt="Ресторан" width="370">
-                                <p class="product__overlay">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это
-                                    позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
-                            </div>
-                            <div class="product__meta">
-                                <h2 class="product__title">Ресторан Seafood</h2>
-                                <p>Приложение</p>
-                            </div>
-                        </a>
+                        <div class="card-set__wrap">
+                            <a href="" class="card-set__link">
+                                <div class="product">
+                                    <picture>
+                                        <source srcset="./images/Desktop/seafood-1200.jpg 1x, ./images/Desktop/seafood-1200@2x.jpg 2x"
+                                            media="(min-width: 1200px)" type="image/jpeg">
+                                        <source srcset="./images/Tablet/seafood-768.jpg 1x, ./images/Tablet/seafood-768@2x.jpg 2x"
+                                            media="(min-width: 768px)" type="image/jpeg">
+                                        <source srcset="./images/Mobile/seafood-480.jpg 1x, ./images/Mobile/seafood-480@2x.jpg 2x"
+                                            media="(max-width: 767px)" type="image/jpeg">
+                                        <img src="./images/Mobile/seafood-480.jpg" alt="Ресторан">
+                                    </picture>
+                                    <!-- <img src="./images/seafood.jpg" alt="Ресторан" width="370"> -->
+                                    <p class="product__overlay">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов.
+                                        Все это
+                                        позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
+                                </div>
+                                <div class="product__meta">
+                                    <h2 class="product__title">Ресторан Seafood</h2>
+                                    <p>Приложение</p>
+                                </div>
+                            </a>
+                        </div>
                     </li>
                     <li class="card-set__item">
-                        <a href="" class="card-set__link">
-                            <div class="product">
-                                <img src="./images/prime.jpg" alt="Проект Prime" width="370">
-                                <p class="product__overlay">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это
-                                    позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
-                            </div>
-                            <div class="product__meta">
-                                <h2 class="product__title">Проект Prime</h2>
-                                <p>Маркетинг</p>
-                            </div>
-                        </a>
+                        <div class="card-set__wrap">
+                            <a href="" class="card-set__link">
+                                <div class="product">
+                                    <picture>
+                                        <source srcset="./images/Desktop/prime-1200.jpg 1x, ./images/Desktop/prime-1200@2x.jpg 2x"
+                                            media="(min-width: 1200px)" type="image/jpeg">
+                                        <source srcset="./images/Tablet/prime-768.jpg 1x, ./images/Tablet/prime-768@2x.jpg 2x"
+                                            media="(min-width: 768px)" type="image/jpeg">
+                                        <source srcset="./images/Mobile/prime-480.jpg 1x, ./images/Mobile/prime-480@2x.jpg 2x"
+                                            media="(max-width: 767px)" type="image/jpeg">
+                                        <img src="./images/Mobile/prime-480.jpg" alt="Проект Prime">
+                                    </picture>
+                                    <!-- <img src="./images/prime.jpg" alt="Проект Prime" width="370"> -->
+                                    <p class="product__overlay">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов.
+                                        Все это
+                                        позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
+                                </div>
+                                <div class="product__meta">
+                                    <h2 class="product__title">Проект Prime</h2>
+                                    <p>Маркетинг</p>
+                                </div>
+                            </a>
+                        </div>
                     </li>
                     <li class="card-set__item">
-                        <a href="" class="card-set__link">
-                            <div class="product">
-                                <img src="./images/boxes.jpg" alt="Проект Boxes" width="370">
-                                <p class="product__overlay">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить
-                                    исчерпывающие сведения о компании или частном лице.</p>
-                            </div>
-                            <div class="product__meta">
-                                <h2 class="product__title">Проект Boxes</h2>
-                                <p>Приложение</p>
-                            </div>
-                        </a>
+                        <div class="card-set__wrap">
+                            <a href="" class="card-set__link">
+                                <div class="product">
+                                    <picture>
+                                        <source srcset="./images/Desktop/boxes-1200.jpg 1x, ./images/Desktop/boxes-1200@2x.jpg 2x"
+                                            media="(min-width: 1200px)" type="image/jpeg">
+                                        <source srcset="./images/Tablet/boxes-768.jpg 1x, ./images/Tablet/boxes-768@2x.jpg 2x"
+                                            media="(min-width: 768px)" type="image/jpeg">
+                                        <source srcset="./images/Mobile/boxes-480.jpg 1x, ./images/Mobile/boxes-480@2x.jpg 2x"
+                                            media="(max-width: 767px)" type="image/jpeg">
+                                        <img src="./images/Mobile/boxes-480.jpg" alt="Проект Boxes">
+                                    </picture>
+                                    <!-- <img src="./images/boxes.jpg" alt="Проект Boxes" width="370"> -->
+                                    <p class="product__overlay">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов.
+                                        Все это позволит посетителю получить
+                                        исчерпывающие сведения о компании или частном лице.</p>
+                                </div>
+                                <div class="product__meta">
+                                    <h2 class="product__title">Проект Boxes</h2>
+                                    <p>Приложение</p>
+                                </div>
+                            </a>
+                        </div>
                     </li>
                     <li class="card-set__item">
-                        <a href="" class="card-set__link">
-                            <div class="product">
-                                <img src="./images/inspiration.jpg" alt="Inspiration" width="370">
-                                <p class="product__overlay">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить
-                                    исчерпывающие сведения о компании или частном лице.</p>
-                            </div>
-                            <div class="product__meta">
-                                <h2 class="product__title">Inspiration has no Borders</h2>
-                                <p>Веб-сайт</p>
-                            </div>
-                        </a>
+                        <div class="card-set__wrap">
+                            <a href="" class="card-set__link">
+                                <div class="product">
+                                    <picture>
+                                        <source srcset="./images/Desktop/inspiration-1200.jpg 1x, ./images/Desktop/inspiration-1200@2x.jpg 2x"
+                                            media="(min-width: 1200px)" type="image/jpeg">
+                                        <source srcset="./images/Tablet/inspiration-768.jpg 1x, ./images/Tablet/inspiration-768@2x.jpg 2x"
+                                            media="(min-width: 768px)" type="image/jpeg">
+                                        <source srcset="./images/Mobile/inspiration-480.jpg 1x, ./images/Mobile/inspiration-480@2x.jpg 2x"
+                                            media="(max-width: 767px)" type="image/jpeg">
+                                        <img src="./images/Mobile/inspiration-480.jpg" alt="Inspiration">
+                                    </picture>
+                                    <!-- <img src="./images/inspiration.jpg" alt="Inspiration" width="370"> -->
+                                    <p class="product__overlay">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов.
+                                        Все это позволит посетителю получить
+                                        исчерпывающие сведения о компании или частном лице.</p>
+                                </div>
+                                <div class="product__meta">
+                                    <h2 class="product__title">Inspiration has no Borders</h2>
+                                    <p>Веб-сайт</p>
+                                </div>
+                            </a>
+                        </div>
                     </li>
                     <li class="card-set__item">
-                        <a href="" class="card-set__link">
-                            <div class="product">
-                                <img src="./images/edition.jpg" alt="Издание Limited Edition" width="370">
-                                <p class="product__overlay">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить
-                                исчерпывающие сведения о компании или частном лице.</p>
-                            </div>
-                            <div class="product__meta">
-                                <h2 class="product__title">Издание Limited Edition</h2>
-                                <p>Дизайн</p>
-                            </div>
-                        </a>
+                        <div class="card-set__wrap">
+                            <a href="" class="card-set__link">
+                                <div class="product">
+                                    <picture>
+                                        <source srcset="./images/Desktop/edition-1200.jpg 1x, ./images/Desktop/edition-1200@2x.jpg 2x"
+                                            media="(min-width: 1200px)" type="image/jpeg">
+                                        <source srcset="./images/Tablet/edition-768.jpg 1x, ./images/Tablet/edition-768@2x.jpg 2x"
+                                            media="(min-width: 768px)" type="image/jpeg">
+                                        <source srcset="./images/Mobile/edition-480.jpg 1x, ./images/Mobile/edition-480@2x.jpg 2x"
+                                            media="(max-width: 767px)" type="image/jpeg">
+                                        <img src="./images/Mobile/edition-480.jpg" alt="Издание Limited Edition">
+                                    </picture>
+                                    <!-- <img src="./images/edition.jpg" alt="Издание Limited Edition" width="370"> -->
+                                    <p class="product__overlay">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов.
+                                        Все это позволит посетителю получить
+                                        исчерпывающие сведения о компании или частном лице.</p>
+                                </div>
+                                <div class="product__meta">
+                                    <h2 class="product__title">Издание Limited Edition</h2>
+                                    <p>Дизайн</p>
+                                </div>
+                            </a>
+                        </div>
                     </li>
                     <li class="card-set__item">
-                        <a href="" class="card-set__link">
-                            <div class="product">
-                                <img src="./images/label.jpg" alt="Проект LAB" width="370">
-                                <p class="product__overlay">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это
-                                    позволит посетителю получить
-                                    исчерпывающие сведения о компании или частном лице.</p>
-                            </div>
-                            <div class="product__meta">
-                                <h2 class="product__title">Проект LAB</h2>
-                                <p>Маркетинг</p>
-                            </div>
-                        </a>
+                        <div class="card-set__wrap">
+                            <a href="" class="card-set__link">
+                                <div class="product">
+                                    <picture>
+                                        <source srcset="./images/Desktop/label-1200.jpg 1x, ./images/Desktop/label-1200@2x.jpg 2x"
+                                            media="(min-width: 1200px)" type="image/jpeg">
+                                        <source srcset="./images/Tablet/label-768.jpg 1x, ./images/Tablet/label-768@2x.jpg 2x"
+                                            media="(min-width: 768px)" type="image/jpeg">
+                                        <source srcset="./images/Mobile/label-480.jpg 1x, ./images/Mobile/label-480@2x.jpg 2x"
+                                            media="(max-width: 767px)" type="image/jpeg">
+                                        <img src="./images/Mobile/label-480.jpg" alt="Проект LAB">
+                                    </picture>
+                                    <!-- <img src="./images/label.jpg" alt="Проект LAB" width="370"> -->
+                                    <p class="product__overlay">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов.
+                                        Все это
+                                        позволит посетителю получить
+                                        исчерпывающие сведения о компании или частном лице.</p>
+                                </div>
+                                <div class="product__meta">
+                                    <h2 class="product__title">Проект LAB</h2>
+                                    <p>Маркетинг</p>
+                                </div>
+                            </a>
+                        </div>
                     </li>
                     <li class="card-set__item">
-                        <a href="" class="card-set__link">
-                            <div class="product">
-                                <img src="./images/business.jpg" alt="Growing Business" width="370">
-                                <p class="product__overlay">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это
-                                    позволит посетителю получить
-                                    исчерпывающие сведения о компании или частном лице.</p>
-                            </div>
-                            <div class="product__meta">
-                                <h2 class="product__title">Growing Business</h2>
-                                <p>Приложение</p>
-                            </div>
-                        </a>
+                        <div class="card-set__wrap">
+                            <a href="" class="card-set__link">
+                                <div class="product">
+                                    <picture>
+                                        <source srcset="./images/Desktop/business-1200.jpg 1x, ./images/Desktop/business-1200@2x.jpg 2x"
+                                            media="(min-width: 1200px)" type="image/jpeg">
+                                        <source srcset="./images/Tablet/business-768.jpg 1x, ./images/Tablet/business-768@2x.jpg 2x"
+                                            media="(min-width: 768px)" type="image/jpeg">
+                                        <source srcset="./images/Mobile/business-480.jpg 1x, ./images/Mobile/business-480@2x.jpg 2x"
+                                            media="(max-width: 767px)" type="image/jpeg">
+                                        <img src="./images/Mobile/business-480.jpg" alt="Growing Business">
+                                    </picture>
+                                    <!-- <img src="./images/business.jpg" alt="Growing Business" width="370"> -->
+                                    <p class="product__overlay">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов.
+                                        Все это
+                                        позволит посетителю получить
+                                        исчерпывающие сведения о компании или частном лице.</p>
+                                </div>
+                                <div class="product__meta">
+                                    <h2 class="product__title">Growing Business</h2>
+                                    <p>Приложение</p>
+                                </div>
+                            </a>
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -185,20 +314,23 @@
                 <a href="./index.html" class="logo logo--white">
                     <span class="logo__accent">Web</span>studio
                 </a>
-
+    
                 <address>
                     <ul class="address-list">
-                        <li><a href="https://www.google.com.ua/maps/place/Lesi+Ukrainky+Blvd,+26,+Kyiv,+02000/@50.4265807,30.5361971,17z/data=!3m1!4b1!4m5!3m4!1s0x40d4cf0e033ecbe9:0x57a4dffefec77da0!8m2!3d50.4265807!4d30.5383858?hl=en"
+                        <li class="address-list__item"><a
+                                href="https://www.google.com.ua/maps/place/Lesi+Ukrainky+Blvd,+26,+Kyiv,+02000/@50.4265807,30.5361971,17z/data=!3m1!4b1!4m5!3m4!1s0x40d4cf0e033ecbe9:0x57a4dffefec77da0!8m2!3d50.4265807!4d30.5383858?hl=en"
                                 target="_blank" rel="noopener noreferrer"
                                 class="address-list__link address-list__link--white">г. Киев, пр-т Леси Украинки, 26</a>
                         </li>
-                        <li><a href="mailto:info@devstudio.com" class="address-list__link">info@devstudio.com</a></li>
-                        <li><a href="tel:+380961111111" class="address-list__link">+38 096 111 11 11</a></li>
+                        <li class="address-list__item"><a href="mailto:info@devstudio.com"
+                                class="address-list__link">info@devstudio.com</a></li>
+                        <li class="address-list__item"><a href="tel:+380961111111" class="address-list__link">+38 096 111 11
+                                11</a></li>
                     </ul>
                 </address>
             </div>
-
-
+    
+    
             <div>
                 <p class="subscribe__title">присоединяйтесь</p>
                 <ul class="socials">
@@ -232,7 +364,7 @@
                     </li>
                 </ul>
             </div>
-
+    
             <div class="subscribe">
                 <p class="subscribe__title">Подпишитесь на рассылку</p>
                 <form class="subscribe__form">
@@ -246,9 +378,11 @@
                     </button>
                 </form>
             </div>
-
+    
         </div>
     </footer>
+
+    <script src="./js/mobile-menu.js"></script>
 </body>
 </html>
 
