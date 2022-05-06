@@ -45,14 +45,16 @@
   @media screen and (min-width: 1200px){
     padding-top: 94px;
     padding-bottom: 94px;
+    
+    &:nth-child(2) {
+    padding-bottom: 0;
+  }
   }
 
   // &:nth-child(4) {
   //   background-color: $secondary-bg-color;
   // }
 
-  // &:nth-child(2) {
-  //   padding-bottom: 0;
-  // }
+  
 
 }
