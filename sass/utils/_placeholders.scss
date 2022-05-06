@@ -14,9 +14,6 @@
 }
 
 %social {
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
   padding: 12px;
   border-radius: 50%;
 
@@ -38,10 +35,6 @@
   padding-top: $retreat;
   padding-bottom: $retreat;
 
-  // @media screen and (min-width: 480px) {
-  //   width: 480px;
-  // }
-
   @media screen and (min-width: 1200px){
     padding-top: 94px;
     padding-bottom: 94px;
@@ -50,11 +43,4 @@
     padding-bottom: 0;
   }
   }
-
-  // &:nth-child(4) {
-  //   background-color: $secondary-bg-color;
-  // }
-
-  
-
 }

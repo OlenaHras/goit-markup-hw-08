@@ -1,21 +1,12 @@
 .card-set {
   display: flex;
   flex-wrap: wrap;
-  // justify-content: center;
   margin: 0 auto;
   margin: -15px;
 }
 
 .card-set__item {
   display: flex;
-  // width: 450px;
-  // margin-right: 30px;
-  // margin-bottom: 30px;
-  // margin: 15px;
-
-  // &:nth-child(3n) {
-  //   margin-right: 0;
-  // }
 
   &:nth-last-child(-n+1) {
     margin-bottom: 0;

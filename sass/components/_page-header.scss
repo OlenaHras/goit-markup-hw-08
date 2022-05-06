@@ -8,38 +8,31 @@
     padding: 0;
   }
 }
-// .header-container {
-//   @include centeredFlex ();
-// }
+
 .nav {
   display: flex;
   align-items: center;
-  // justify-content: space-between;
 
   @media screen and (min-width:768px){
     justify-content: space-between;
-    // justify-content: flex-start;
   }
   
 }
 
 .logo {
-  
-  // margin-right: 93px;
-
+ 
   color: $title-text-color;
   font-family: Raleway, sans-serif;
   @include fontSize(24px, 1.16);
   text-decoration: none;
+  &__accent {
+    color: $accent-color;
+  }
 
   @media screen and (min-width:1200px) {
     margin-right: 93px;
     @include fontSize(26px, 1.19);
   }
-}
-
-.logo__accent {
-  color: $accent-color;
 }
 
 /* site-nav */
@@ -50,7 +43,6 @@
   @media screen and (min-width:768px){
     display: flex;
     align-items: center;
-    // margin-left: 88px;
   }
   
 }
@@ -114,19 +106,14 @@
 }
 /* auth-nav */
 .auth-nav {
-  // margin-top: 302px;
   display: flex;
   flex-direction: column-reverse;
-//   display: flex;
-//   justify-content: flex-end;
-//   margin-left: auto;
-//   align-items: center;
+
 @media screen and (min-width:768px){
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin-left: 84px;
-  // align-items: center;
   margin-top: 0;
 }
 @media screen and (min-width: 1200px) {
@@ -136,9 +123,6 @@
 
 }
 
-// .auth-nav__item+.auth-nav__item {
-//   margin-top: 32px;
-// }
 .auth-nav__item {
   @media screen and (max-width: 767px) {
     margin-top: 32px;
@@ -149,11 +133,9 @@
   }
 }
 .auth-nav__link {
-  // display: flex;
   margin-bottom: 32px;
   color: $primary-text-color;
   font-weight: 500;
-  // @include fontSize (34px, 1.18);
   @include fontSize (24px, 1.17);
   letter-spacing: 0.02em;
   text-decoration: none;
@@ -174,8 +156,6 @@
     }
     @media screen and (min-width: 768px) {
       display: flex;
-      // flex-direction: column;
-      // justify-content: center;
       margin-bottom: 0;
       @include fontSize (12px, 1.16)
 
@@ -186,10 +166,9 @@
     }
 }
 .auth-nav__item +.auth-nav__item .auth-nav__link {
-  // display: inline-block;
   @include fontSize (24px, 1.18);
-  // margin-top: 32px;
   letter-spacing: 0.02em;
+
   @media screen and (min-width:480px) {
     @include fontSize (34px, 1.18);
   }
@@ -255,7 +234,6 @@
 
 
 .soc-navigation__link {
-  // @include centeredFlex();
   padding: 0 10px;
   @include fontSize(12px, 1.22);
   letter-spacing: 0.02em;

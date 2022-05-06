@@ -430,16 +430,16 @@ li {
   text-decoration: none;
 }
 
+.logo__accent {
+  color: #2196f3;
+}
+
 @media screen and (min-width: 1200px) {
   .logo {
     margin-right: 93px;
     font-size: 26px;
     line-height: 1.19;
   }
-}
-
-.logo__accent {
-  color: #2196f3;
 }
 
 /* site-nav */
