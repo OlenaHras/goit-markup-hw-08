@@ -1,9 +1,18 @@
-.page-footer .container {
-//   display: flex;
-//   flex-wrap: nowrap;
-//   align-items: baseline;
-//   justify-content: space-between;
+// .page-footer .container {
+// //   display: flex;
+// //   flex-wrap: nowrap;
+// //   align-items: baseline;
+// //   justify-content: space-between;
+//   text-align: center;
+// }
+.flex-footer {
+  // display: flex;
   text-align: center;
+  @media screen and (min-width:1200px){
+    display: flex;
+    text-align: left;
+    justify-content: space-between;
+  }
 }
 
 .page-footer {
@@ -12,16 +21,24 @@
   padding-bottom: 60px;
 
 }
+.address-wrap {
+  @media screen and (min-width:768px){
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
 
 .address {
   display: block;
+
+  @media screen and (min-width:1200px) {
+    margin-right: 70px;
+  }
 }
 
 .address-list__item {
   margin-bottom: 8px;
-}
-.address-list__item:last-child {
-  margin-bottom: 60px;
 }
 
 // .address-list {
@@ -64,7 +81,12 @@
 
   color: $white-color;
 }
-
+.join-wrap {
+  margin-top: 60px;
+  @media screen and (min-width:768px){
+    margin-top: 0;
+  }
+}
 .socials {
   @include centeredFlex();
   margin-bottom: 60px;
@@ -84,7 +106,13 @@
   
   }
 }
+.subscribe {
+  margin-top: 60px;
 
+  @media screen and (min-width:1200px) {
+    margin: 0;
+  }
+}
 .subscribe__title {
   margin-bottom: 20px;
   display: block;
@@ -99,6 +127,18 @@
 .subscribe__form {
   // display: flex;
   margin-top: 20px;
+
+  @media screen and (min-width:768px){
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @media screen and (min-width:1200px) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
 }
 
 .subscribe__input {
@@ -120,6 +160,7 @@
     letter-spacing: 0.03em;
     
     color: rgba(255, 255, 255, 0.6);
+
   }
 
   &:hover {
@@ -133,7 +174,15 @@
     box-shadow: none;
     border: 1px solid $accent-color;
   }
+  @media screen and (min-width:768px) {
+    width: 450px;
+  }
 
+  @media screen and (min-width:1200px) {
+    width: 358px;
+    margin-bottom: 0;
+    margin-right: 12px;
+  }
 }
 
 .subscribe__button {
