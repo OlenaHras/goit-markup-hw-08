@@ -31,7 +31,7 @@
 
 .client-list__link {
   @include centeredFlex();
-  height: $retreat;
+  height: 92px;
   border: 1px solid $icons;
   color: $icons;
   border-radius: 4px;
